@@ -1,0 +1,14 @@
+
+{% load staticfiles %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}"/>
+
+<ul>
+    <h3> Hera are all my Albums</h3>
+    {% for album in all_albums %}
+    <li> <a href = "{% url 'music:detail' album_id=album.id %}">{{album.artist}}</a> </li>
+    {% endfor %}
+</ul>
+
+
+
